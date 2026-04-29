@@ -1,14 +1,22 @@
 import express from "express";
-import notesRoute from "./routes/noteRoutes/noteRoutes.js";
-import { rateLimiter } from "./middleware/rateLimiter.js";
-import { connectDB } from "./config/db.js";
+import cors from "cors";
 import "dotenv/config";
+
+import notesRoute from "./routes/noteRoutes/noteRoutes.js";
+import rateLimiter from "./middleware/rateLimiter.js";
+import { connectDB } from "./config/db.js";
 
 const PORT = process.env.PORT || 5001;
 
 const app = express();
 
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  }),
+);
 
 app.use(rateLimiter);
 
