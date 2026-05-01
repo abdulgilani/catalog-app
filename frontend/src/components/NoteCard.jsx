@@ -1,9 +1,9 @@
-import axios from "axios";
 import toast from "react-hot-toast";
 
 import { Link } from "react-router";
 import { PenSquareIcon, Trash2Icon } from "lucide-react";
 import formatDate from "../lib/utils.js";
+import api from "../lib/axios.js";
 
 const NoteCard = ({ note, setNotes }) => {
   const handleDelete = async (e, id) => {
@@ -12,7 +12,7 @@ const NoteCard = ({ note, setNotes }) => {
     if (!window.confirm("Are you sure you want to delete this brew?")) return;
 
     try {
-      await axios.delete(`http://localhost:5001/api/notes/${id}`);
+      await api.delete(`notes/${id}`);
       setNotes((prev) => prev.filter((note) => note._id !== id)); // remove the deleted ones
       toast.success("Brew deleted successfully!");
     } catch (error) {
@@ -23,15 +23,15 @@ const NoteCard = ({ note, setNotes }) => {
 
   return (
     <Link
-      to={`/note/${note._id}`}
-      className="card bg-base-100 hover:shadow-lg transition-all duration-200 
-      border-t-4 border-solid border-[#ECE0D1]"
+      to={`/brew/${note._id}`}
+      className="card bg-mocha hover:shadow-lg transition-all duration-200 
+      border-t-4 border-solid border-light-coffee"
     >
       <div className="card-body">
-        <h3 className="card-title text-base-content">{note.title}</h3>
-        <p className="text-base-content/70 line-clamp-3">{note.content}</p>
+        <h3 className="card-title text-light-coffee">{note.title}</h3>
+        <p className="text-light-coffee/70 line-clamp-3">{note.content}</p>
         <div className="card-actions justify-between items-center mt-4">
-          <span className="text-sm text-base-content/60">
+          <span className="text-sm text-light-coffee/60">
             {formatDate(new Date(note.createdAt))}
           </span>
           <div className="flex items-center gap-1">

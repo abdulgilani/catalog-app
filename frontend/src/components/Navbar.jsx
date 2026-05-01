@@ -13,7 +13,7 @@ const Navbar = () => {
             </h1>
           </div>
           <div className="flex items-center gap-4">
-            <Link to={"/create"} className="btn btn-primary">
+            <Link to={"/make"} className="btn btn-primary">
               <PlusIcon className="size-5"></PlusIcon>
               <span>Add Brew</span>
             </Link>
