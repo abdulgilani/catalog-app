@@ -9,7 +9,7 @@
   - [Setup](#setup)
     - [Prequisites](#prequisites)
     - [Installation](#installation)
-  - [Repository Structuree](#repository-structuree)
+  - [Repository Structures](#repository-structures)
 
 ---
 
@@ -40,20 +40,20 @@ BrewNotes is a coffee-themed note taking app created with MERN stack. The idea c
 
 ### Installation
 
-1. Clone the repository
+1. Clone the Repository
 
 ```
 git clone https://github.com/abdulgilani/catalog-app
 ```
 
-2. Install dependencies
+2. Install Dependencies
 
 ```
 cd backend && npm i
 cd ../frontend && npm i
 ```
 
-3. Environmnent setup
+3. Environmnent Setup
 
 ```
 cp backend/.env.example backend/.env
@@ -84,7 +84,7 @@ npm run start
 
 Visit http://localhost:5001/api
 
-## Repository Structuree
+## Repository Structures
 
 ```
 /catalog-app
@@ -92,8 +92,6 @@ Visit http://localhost:5001/api
 ├── README.md
 ├── /backend
 │   ├── .env.example
-│   ├── package-lock.json
-│   ├── package.json
 │   └── src
 │       ├── /config                                    # Upstash and DBconfigs
 │       ├── /controller                                # Endpoint controllers (getAllNotes, getNotes, postNote, updateNote, deleteNote)
@@ -106,10 +104,6 @@ Visit http://localhost:5001/api
 │   ├── coffee.svg
 │   ├── eslint.config.js
 │   ├── index.html
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── /public
 │   ├── src
 │   │   ├── App.jsx                                    # Main routing setup
 │   │   ├── /components                                # UI Components (Navbar, NoteCard, NotesNotFound, RateLimit)
