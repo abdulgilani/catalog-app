@@ -9,6 +9,7 @@
   - [Setup](#setup)
     - [Prequisites](#prequisites)
     - [Installation](#installation)
+  - [Repository Structuree](#repository-structuree)
 
 ---
 
@@ -82,3 +83,41 @@ npm run start
 ```
 
 Visit http://localhost:5001/api
+
+## Repository Structuree
+
+```
+/catalog-app
+├── .gitignore
+├── README.md
+├── /backend
+│   ├── .env.example
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src
+│       ├── /config                                    # Upstash and DBconfigs
+│       ├── /controller                                # Endpoint controllers (getAllNotes, getNotes, postNote, updateNote, deleteNote)
+│       ├── index.js                                   # Main express server entry
+│       ├── /middleware                                # Rate limiting middleware
+│       ├── /model                                     # Model to create the database in the MongoDB project cluster
+│       └── /routes                                    # Endpoints routes to get to controllers
+├── /frontend
+│   ├── README.md
+│   ├── coffee.svg
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── /public
+│   ├── src
+│   │   ├── App.jsx                                    # Main routing setup
+│   │   ├── /components                                # UI Components (Navbar, NoteCard, NotesNotFound, RateLimit)
+│   │   ├── index.css                                  # Tailwind configuration page
+│   │   ├── /lib                                       # Config files (axios, utils)
+│   │   ├── main.jsx                                   # React entry point
+│   │   └── /pages                                     # App Pages (CreateHomePage, HomePage, NoteDetailPage)
+│   ├── tailwind.config.js
+│   └── vite.config.js
+└── package.json
+```
