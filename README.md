@@ -2,7 +2,13 @@
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
+- [BrewNotes](#brewnotes)
+  - [Table of Contents](#table-of-contents)
+  - [About the Project](#about-the-project)
+  - [Tech Stacks](#tech-stacks)
+  - [Setup](#setup)
+    - [Prequisites](#prequisites)
+    - [Installation](#installation)
 
 ---
 
@@ -14,10 +20,11 @@ BrewNotes is a coffee-themed note taking app created with MERN stack. The idea c
 
 ## Tech Stacks
 
-- Frontend: Vite + TailwindCSS + DaisyUI
+- Frontend: Vite + TailwindCSS
 - Language: JavaScript
 - Backend: Node + Express
 - Database: MongoDB
+- Rate Limit Feature: Upstash
 - Hosting: Render
 
 ---
@@ -28,6 +35,7 @@ BrewNotes is a coffee-themed note taking app created with MERN stack. The idea c
 
 - Node 22+
 - MongoDB Project (Database)
+- Upstash Workflow (Redis)
 
 ### Installation
 
@@ -36,3 +44,41 @@ BrewNotes is a coffee-themed note taking app created with MERN stack. The idea c
 ```
 git clone https://github.com/abdulgilani/catalog-app
 ```
+
+2. Install dependencies
+
+```
+    cd backend && npm i
+    cd ../frontend && npm i
+```
+
+3. Environmnent setup
+
+```
+cp backend/.env.example backend/.env
+```
+
+Update `.env` with your configurations
+
+- MongoDB URI
+- Upstash Redis REST URL
+- Upstash Redis REST Token
+
+4. Development
+
+```
+    # Run the backend
+    cd backend && npm run dev
+
+    # Run the frontend
+    cd frontend && npm run dev
+```
+
+5. Production Build
+
+```
+npm run build
+npm run start
+```
+
+Visit http://localhost:5001/api
