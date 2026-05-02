@@ -48,8 +48,8 @@ git clone https://github.com/abdulgilani/catalog-app
 2. Install dependencies
 
 ```
-    cd backend && npm i
-    cd ../frontend && npm i
+cd backend && npm i
+cd ../frontend && npm i
 ```
 
 3. Environmnent setup
@@ -67,11 +67,11 @@ Update `.env` with your configurations
 4. Development
 
 ```
-    # Run the backend
-    cd backend && npm run dev
+# Run the backend
+cd backend && npm run dev
 
-    # Run the frontend
-    cd frontend && npm run dev
+# Run the frontend
+cd frontend && npm run dev
 ```
 
 5. Production Build
