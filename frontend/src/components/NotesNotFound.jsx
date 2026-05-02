@@ -12,7 +12,7 @@ const NotesNotFound = () => {
         Ready to organize your thoughts? Start your first brew and capture
         what’s on your mind.
       </p>
-      <Link to="/make" className="btn btn-primary">
+      <Link to={"/make"} className="btn btn-primary">
         Start Your First Brew
       </Link>
     </div>
