@@ -94,7 +94,7 @@ Visit http://localhost:5001/api
 ## Repository Structures
 
 ```
-/catalog-app
+/brewnotes
 ├── .gitignore
 ├── README.md
 ├── /backend
