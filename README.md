@@ -4,12 +4,19 @@
 
 - [BrewNotes](#brewnotes)
   - [Table of Contents](#table-of-contents)
+  - [Acessing Online](#acessing-online)
   - [About the Project](#about-the-project)
   - [Tech Stacks](#tech-stacks)
   - [Setup](#setup)
     - [Prequisites](#prequisites)
     - [Installation](#installation)
   - [Repository Structures](#repository-structures)
+
+---
+
+## Acessing Online
+
+Both the frontend and backend component has been deployed using Render. You can access the app [here](https://catalog-app-r0on.onrender.com/).
 
 ---
 
