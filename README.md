@@ -50,7 +50,7 @@ BrewNotes is a coffee-themed note taking app created with MERN stack. The idea c
 1. Clone the Repository
 
 ```
-git clone https://github.com/abdulgilani/catalog-app
+git clone https://github.com/abdulgilani/brewnotes
 ```
 
 2. Install Dependencies
